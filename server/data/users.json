@@ -1,0 +1,14 @@
+{
+  "cf3eb52d-5035-4605-9f44-e0ffa968a8f1": {
+    "anonymousId": "cf3eb52d-5035-4605-9f44-e0ffa968a8f1",
+    "isSubscribed": true,
+    "stripeCustomerId": "cus_SVZ9a5cxeW0LPN",
+    "stripeSubscriptionId": "sub_1RaY12JTpnvhxeZ73Ic0thWm"
+  },
+  "4a7a716e-61a6-4222-b85b-143dd4be1fe5": {
+    "anonymousId": "4a7a716e-61a6-4222-b85b-143dd4be1fe5",
+    "isSubscribed": true,
+    "stripeCustomerId": "cus_SXOKjlsiZrjF9f",
+    "stripeSubscriptionId": "sub_1RcJXsJTpnvhxeZ7EhMeB4r5"
+  }
+}
