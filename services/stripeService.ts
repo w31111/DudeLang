@@ -15,7 +15,7 @@ export const PRICE_IDS = {
 // 支払い処理を開始する関数
 export const initiatePayment = async (priceId: string, anonymousId: string) => {
   try {
-    const response = await fetch('http://localhost:3000/api/create-checkout-session', {
+    const response = await fetch('https://dudelangserver.onrender.com/api/create-checkout-session', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
