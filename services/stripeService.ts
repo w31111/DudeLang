@@ -12,19 +12,22 @@ export const PRICE_IDS = {
   ANNUAL: 'price_1RZ5ooJTpnvhxeZ7Wibjdzfk',   // 実際のStripeの価格IDに置き換えてください
 };
 
+// 追加：APIのベースURLを環境変数から取得
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
+
 // 支払い処理を開始する関数
 export const initiatePayment = async (priceId: string, anonymousId: string) => {
   try {
-    const response = await fetch('https://dudelangserver.onrender.com/api/create-checkout-session', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        priceId,
-        anonymousId,
-      }),
-    });
+    const response = await fetch(`${API_BASE_URL}/api/create-checkout-session`, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    priceId,
+    anonymousId,
+  }),
+});
 
     const session = await response.json();
 
