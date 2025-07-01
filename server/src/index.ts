@@ -16,7 +16,11 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
 });
 
 // ミドルウェアの設定
-app.use(cors());
+const corsOptions = {
+  origin: 'https://dudelang.onrender.com', // ←ここをあなたのフロントエンドURLに
+  credentials: true, // 必要なら
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // チェックアウトセッションを作成するエンドポイント
